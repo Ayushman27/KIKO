@@ -22,7 +22,10 @@ from app.services.gemini_live_voice import (
     AVAILABLE_VOICES,
     play_audio_async,
 )
-from google.genai import types
+try:
+    from google.genai import types
+except ImportError:
+    types = None
 
 logger = logging.getLogger("kiko.voice")
 router = APIRouter(prefix="/voice", tags=["Voice Agent"])
