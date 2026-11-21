@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KikoEvent",
+  "type": "object",
+  "properties": {
+    "event": {
+      "type": "string",
+      "enum": [
+        "DEVICE_CONNECTED",
+        "DEVICE_DISCONNECTED",
+        "TASK_STARTED",
+        "TASK_PROGRESS",
+        "TASK_COMPLETED",
+        "TASK_FAILED",
+        "APPROVAL_REQUIRED",
+        "APPROVAL_RESOLVED",
+        "MESSAGE_RECEIVED",
+        "AGENT_STATUS_CHANGED"
+      ]
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "device_id": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "timestamp": {
+      "type": "string"
+    }
+  },
+  "required": ["event", "timestamp"]
+}

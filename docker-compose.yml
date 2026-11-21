@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://kiko:kikopass@postgres:5432/kiko_db
+      - REDIS_URL=redis://redis:6379/0
+      - SECRET_KEY=kiko_super_secret_jwt_key_change_in_production_2026
+      - DEFAULT_LLM_PROVIDER=openai
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./backend/data:/app/data
+
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=kiko
+      - POSTGRES_PASSWORD=kikopass
+      - POSTGRES_DB=kiko_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:

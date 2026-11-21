@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#0b0e13", "on-primary-container": "#006970", "secondary-fixed": "#ffdbd1", "surface-bright": "#36393f", "surface-dim": "#101319", "secondary-fixed-dim": "#ffb5a0", "on-background": "#e1e2ea", "surface-container-high": "#272a30", "primary-fixed-dim": "#00dbe9", "on-error-container": "#ffdad6", "outline": "#849495", "on-primary": "#00363a", "on-surface-variant": "#b9cacb", "on-primary-fixed": "#002022", "on-secondary-fixed-variant": "#872000", "error-container": "#93000a", "on-secondary": "#601400", "background": "#101319", "primary-container": "#00f0ff", "tertiary-container": "#d8d5ff", "secondary": "#ffb5a0", "inverse-primary": "#006970", "on-tertiary-fixed-variant": "#2f00e4", "on-error": "#690005", "tertiary": "#f8f4ff", "on-secondary-container": "#541100", "on-surface": "#e1e2ea", "primary": "#dbfcff", "on-primary-fixed-variant": "#004f54", "tertiary-fixed": "#e3dfff", "inverse-on-surface": "#2d3036", "secondary-container": "#ff5625", "on-tertiary": "#1f00a4", "on-secondary-fixed": "#3b0900", "surface": "#101319", "surface-container": "#1d2025", "surface-variant": "#32353b", "surface-container-highest": "#32353b", "inverse-surface": "#e1e2ea", "surface-container-low": "#191c21", "error": "#ffb4ab", "surface-tint": "#00dbe9", "outline-variant": "#3b494b", "tertiary-fixed-dim": "#c3c0ff", "on-tertiary-fixed": "#100069", "on-tertiary-container": "#4a37fd", "primary-fixed": "#7df4ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter": "1rem", "space-xs": "0.25rem", "gutter-md": "1.5rem", "margin": "1rem", "gutter-lg": "2rem", "margin-lg": "3rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "margin-md": "2rem", "space-md": "1rem" }, "fontFamily": { "label-sm": [ "JetBrains Mono" ], "headline-sm": [ "Space Grotesk" ], "body-sm": [ "Geist" ], "display-hero-mobile": [ "Space Grotesk" ], "body-lg": [ "Geist" ], "display-hero": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "label-md": [ "JetBrains Mono" ], "body-md": [ "Geist" ], "label-lg": [ "JetBrains Mono" ] }, "fontSize": { "label-sm": [ "9px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "fontWeight": "500" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-lg": [ "16px", { "lineHeight": "24px", "fontWeight": "400" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "600" } ], "headline-md": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "label-md": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "400" } ], "label-lg": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest/90 backdrop-blur-2xl z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-full overflow-hidden"><div class="h-16 px-gutter-md flex items-center justify-between shrink-0"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">SYNAPSE // OS</span></div><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant px-space-xs py-0.5 rounded bg-surface-container-high">v4.8</span></div></div><div class="px-gutter-md py-space-xs shrink-0"><div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-xs">Navigation</div></div><nav class="px-space-md flex flex-col gap-space-xs shrink-0" data-active-classes="bg-surface-container-high text-primary font-medium rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-2 transition-all bg-surface-container-high text-primary font-medium rounded-lg" data-path="conversations" href="#"><span class="material-symbols-outlined text-[18px]">forum</span>Conversations</a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="models-and-weights" href="#"><span class="material-symbols-outlined text-[18px]">neurology</span>Models &amp; Weights</a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="audio-streams" href="#"><span class="material-symbols-outlined text-[18px]">graphic_eq</span>Audio Streams</a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="memories" href="#"><span class="material-symbols-outlined text-[18px]">memory</span>Memories</a><a class="flex items-center gap-space-sm px-space-md py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all font-body-md text-body-md" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">tune</span>Settings</a></nav><div class="px-gutter-md pt-space-md pb-space-xs flex items-center justify-between shrink-0"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Chat Sessions</span><span class="font-label-sm text-label-sm text-primary-fixed-dim">SYS.SYNC // OK</span></div><div class="flex-1 overflow-y-auto px-space-md space-y-space-xs"><a class="group block px-space-md py-space-sm rounded-lg hover:bg-surface-container transition-all" data-path="quantum-cognitive-mapping" href="#"><div class="font-body-sm text-body-sm text-on-surface group-hover:text-primary transition-colors truncate">Quantum Cognitive Mapping</div><div class="font-label-sm text-label-sm text-outline flex items-center gap-1.5 mt-0.5"><span>ACTIVE</span>•<span>4m ago</span></div></a><a class="group block px-space-md py-space-sm rounded-lg hover:bg-surface-container transition-all" data-path="neural-architecture-review" href="#"><div class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors truncate">Neural Architecture Review</div><div class="font-label-sm text-label-sm text-outline flex items-center gap-1.5 mt-0.5"><span>CHECKPOINT</span>•<span>1h ago</span></div></a><a class="group block px-space-md py-space-sm rounded-lg hover:bg-surface-container transition-all" data-path="real-time-voice-synthesis-debug" href="#"><div class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors truncate">Real-time Voice Synthesis Debug</div><div class="font-label-sm text-label-sm text-outline flex items-center gap-1.5 mt-0.5"><span>STREAM // 48kHz</span>•<span>3h ago</span></div></a><a class="group block px-space-md py-space-sm rounded-lg hover:bg-surface-container transition-all" data-path="autonomous-agent-protocol" href="#"><div class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors truncate">Autonomous Agent Protocol</div><div class="font-label-sm text-label-sm text-outline flex items-center gap-1.5 mt-0.5"><span>DEPLOYED</span>•<span>1d ago</span></div></a></div><div class="p-space-md bg-surface-container-low/70 m-space-md rounded-xl shrink-0 flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="relative"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></div></div><div class="flex flex-col"><span class="font-body-sm text-body-sm text-on-surface font-medium truncate max-w-[100px]">Operator 01</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">G-Mode Neural Link</span></div></div><button aria-label="User Status" class="text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/70 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full px-gutter-lg h-16 flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-sm py-1 rounded-full bg-surface-container"><span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span><span class="font-label-sm text-label-sm text-on-surface-variant">LATENCY // 14ms</span></div><div class="hidden sm:flex items-center gap-space-sm px-space-sm py-1 rounded-full bg-surface-container"><span class="font-label-sm text-label-sm text-on-surface-variant">SYNAPSE ENGINE // 3.2 TFLOPS</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs text-on-surface-variant bg-surface-container-low px-space-md py-1.5 rounded-full"><span class="material-symbols-outlined text-[16px]">mic</span><span class="font-label-sm text-label-sm text-primary">AUDIO I/O ENGAGED</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background flex-1 relative"><div class="flex flex-col w-full relative min-h-[calc(100vh-4rem)] overflow-hidden selection:bg-primary-container selection:text-on-primary-container" data-mode="alpha" id="synapse-root">
+<!-- Dynamic Atmospheric Background Elements -->
+<!-- STITCH_SHADER_START:ANIMATION_2 class="absolute inset-0 w-full h-full pointer-events-none opacity-80 z-0" -->
+<div class="absolute inset-0 w-full h-full pointer-events-none opacity-80 z-0" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_2" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_2');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+
+// Simplex-style 2D noise
+vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
+
+float snoise(vec2 v) {
+    const vec4 C = vec4(0.211324865405187,  // (3.0-sqrt(3.0))/6.0
+                        0.366025403784439,  // 0.5*(sqrt(3.0)-1.0)
+                        -0.577350269189626, // -1.0 + 2.0 * C.x
+                        0.024390243902439); // 1.0 / 41.0
+    vec2 i  = floor(v + dot(v, C.yy) );
+    vec2 x0 = v -   i + dot(i, C.xx);
+    vec2 i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+    vec4 x12 = x0.xyxy + C.xxzz;
+    x12.xy -= i1;
+    i = mod289(i);
+    vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 ))
+        + i.x + vec3(0.0, i1.x, 1.0 ));
+    vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+    m = m*m ;
+    m = m*m ;
+    vec3 x = 2.0 * fract(p * C.www) - 1.0;
+    vec3 h = abs(x) - 0.5;
+    vec3 ox = floor(x + 0.5);
+    vec3 a0 = x - ox;
+    m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+    vec3 g;
+    g.x  = a0.x  * x0.x  + h.x  * x0.y;
+    g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+    return 130.0 * dot(m, g);
+}
+
+float fbm(vec2 p) {
+    float total = 0.0;
+    float amp = 0.55;
+    float freq = 1.0;
+    for(int i = 0; i < 5; i++) {
+        total += amp * snoise(p * freq);
+        freq *= 2.05;
+        amp *= 0.48;
+    }
+    return total;
+}
+
+void main() {
+    vec2 uv = gl_FragCoord.xy / u_resolution.xy;
+    vec2 p = (gl_FragCoord.xy * 2.0 - u_resolution.xy) / min(u_resolution.x, u_resolution.y);
+
+    float t = u_time * 0.18;
+    
+    // Domain warping for organic silky smoke & fluid dispersion
+    vec2 q = vec2(fbm(p + vec2(0.0, t * 0.4)), fbm(p + vec2(5.2, 1.3 - t * 0.3)));
+    vec2 r = vec2(fbm(p + 4.0 * q + vec2(1.7 - t * 0.5, 9.2 + t * 0.2)),
+                  fbm(p + 4.0 * q + vec2(8.3 + t * 0.3, 2.8 - t * 0.4)));
+
+    float f = fbm(p + 3.5 * r);
+
+    // Deep luxury dark background base
+    vec3 bgColor = vec3(0.03, 0.045, 0.07);
+    
+    // Vibrant ethereal smoke swirls that respond to dual-mode accent
+    // Controlled primarily with gentle cyan/blue glow by default with deep velvet smoke shadows
+    vec3 smokeCyan = vec3(0.0, 0.78, 0.98);
+    vec3 smokeDeep = vec3(0.08, 0.12, 0.28);
+    vec3 smokeGlow = vec3(0.15, 0.45, 0.85);
+
+    vec3 col = mix(bgColor, smokeDeep, clamp(f * 1.4, 0.0, 1.0));
+    col = mix(col, smokeCyan, clamp(length(q) * f * 0.85, 0.0, 1.0));
+    col += smokeGlow * pow(clamp(f * 1.2, 0.0, 1.0), 3.0) * 0.65;
+
+    // Soft vignetting
+    float vignette = smoothstep(1.5, 0.4, length(uv - 0.5) * 1.4);
+    col *= vignette;
+
+    gl_FragColor = vec4(col, 0.95);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_2 -->
+<!-- Dual-Phase Gradient Overlays (Toggled via CSS state) -->
+<div class="absolute inset-0 pointer-events-none transition-all duration-700 ease-out z-0 bg-gradient-to-tr from-primary-container/10 via-transparent to-primary/5" id="tint-overlay"></div>
+<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(0,240,255,0.08),transparent)] transition-all duration-700" id="radial-glow"></div>
+<!-- Primary Workspace Content Container -->
+<div class="relative z-10 flex flex-col justify-between flex-1 px-margin-md sm:px-gutter-lg lg:px-margin-lg py-gutter-md max-w-7xl mx-auto w-full">
+<!-- Top Utility & Mode Control Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md w-full">
+<!-- Neural State Indicators -->
+<div class="flex items-center gap-space-sm">
+<div class="px-space-md py-1.5 rounded-full bg-surface-container/80 backdrop-blur-md flex items-center gap-space-sm shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75" id="ping-dot"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container" id="status-dot"></span>
+</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface" id="mode-badge-label">NEURAL SYNC // ALPHA MODE</span>
+</div>
+<div class="hidden md:flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-low/70 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm">
+<span>THROUGHPUT:</span>
+<span class="text-primary font-mono" id="throughput-val">4.8 TFLOPS</span>
+</div>
+</div>
+<!-- Center-Right: Mode Segmented Switcher -->
+<div class="flex items-center gap-space-md">
+<div class="flex items-center p-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-2xl shadow-xl">
+<button class="relative px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center gap-space-xs bg-primary-container text-on-primary-container font-semibold shadow-lg" id="btn-mode-alpha" type="button">
+<span class="material-symbols-outlined text-[15px]">psychology</span>
+<span>ALPHA MODE</span>
+</button>
+<button class="relative px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface" id="btn-mode-g" type="button">
+<span class="material-symbols-outlined text-[15px]">bolt</span>
+<span>G MODE OVERDRIVE</span>
+</button>
+</div>
+<!-- Mute / Live Stream Diagnostic Trigger -->
+<button class="h-9 w-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" id="btn-stream-toggle" title="Toggle Audio Feed">
+<span class="material-symbols-outlined text-[18px]" id="mic-icon">mic</span>
+</button>
+</div>
+</div>
+<!-- HUD Upper Deck: AI Synthetic Hologram Orb & Telemetry Readout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center my-space-lg">
+<!-- Left Sub-panel: Model Cognition Metrics -->
+<div class="lg:col-span-4 order-2 lg:order-1 flex flex-col gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest/60 backdrop-blur-xl shadow-md">
+<div class="flex items-center justify-between pb-space-sm mb-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Cognitive Thread</span>
+<span class="font-label-sm text-label-sm text-primary" id="thread-id">PID #904-SYN</span>
+</div>
+<div class="flex items-end justify-between">
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="model-codename">NEURO-9 // DEEP REASON</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5" id="engine-desc">Analytical matrix tuned for precision &amp; complex systemic synthesis.</p>
+</div>
+</div>
+<!-- Real-time Sparkline Visualization -->
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>SPECTRAL DENSITY</span>
+<span id="spectral-freq">18.4 kHz (OPTIMAL)</span>
+</div>
+<svg class="w-full h-8 text-primary overflow-visible" fill="none" viewbox="0 0 240 32">
+<path d="M0,16 Q20,4 40,16 T80,16 T120,6 T160,26 T200,10 T240,16" fill="none" id="sparkline-path" stroke="currentColor" stroke-linecap="round" stroke-width="1.75"></path>
+<path d="M0,16 Q20,4 40,16 T80,16 T120,6 T160,26 T200,10 T240,16 L240,32 L0,32 Z" fill="currentColor" fill-opacity="0.08" id="sparkline-fill"></path>
+</svg>
+</div>
+</div>
+<!-- Telemetry Chips -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low/70 backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-outline block">VOCAL LATENCY</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold" id="val-latency">14ms STEREO</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low/70 backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-outline block">JITTER BUFFER</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">0.42ms LOCK</span>
+</div>
+</div>
+</div>
+<!-- Right/Center-stage: Holographic Dotted Face Synthesizer Orb (160px+) -->
+<div class="lg:col-span-8 order-1 lg:order-2 flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-space-lg">
+<!-- Live Status Pill & Articulation Controller Trigger -->
+<div class="flex flex-col items-center sm:items-end gap-space-xs">
+<div class="px-space-md py-1 rounded-full bg-surface-container-high/90 backdrop-blur-xl flex items-center gap-space-xs shadow-lg">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse" id="voice-sync-light"></span>
+<span class="font-label-sm text-label-sm text-primary tracking-wider" id="sync-status">SYNCHRONIZED // 48kHz</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs shadow-sm" id="btn-toggle-talking">
+<span class="material-symbols-outlined text-[16px] text-primary" id="play-pause-icon">graphic_eq</span>
+<span id="speech-toggle-text">SIMULATE SPEECH CADENCE</span>
+</button>
+</div>
+<!-- The 160px Dotted Face Hologram Capsule Container -->
+<div class="relative w-44 h-44 flex items-center justify-center">
+<!-- Outer Radiant Orbit 1 -->
+<div class="absolute inset-0 rounded-full bg-transparent animate-[spin_24s_linear_infinite] pointer-events-none opacity-40 shadow-[0_0_35px_rgba(0,240,255,0.25)]" id="orb-outer-ring">
+<div class="w-2.5 h-2.5 rounded-full bg-primary-container absolute -top-1 left-1/2 -translate-x-1/2"></div>
+</div>
+<!-- Pulsing Audio Waveform Halo (Expanding circles) -->
+<div class="absolute inset-1.5 rounded-full bg-primary-container/10 transition-all duration-300" id="audio-wave-halo"></div>
+<!-- Central Capsule Core -->
+<div class="relative w-36 h-36 rounded-full bg-surface-container-lowest/90 backdrop-blur-2xl flex items-center justify-center overflow-hidden shadow-2xl" id="face-orb-core">
+<!-- SVG Dotted Matrix Human-Like Wireframe Face -->
+<svg class="w-28 h-28 text-primary transition-all duration-500 overflow-visible" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter height="140%" id="glow" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="1.5"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+</defs>
+<!-- Forehead Array Dots -->
+<g class="transition-opacity duration-300 opacity-90" filter="url(#glow)">
+<circle cx="34" cy="24" fill="currentColor" r="1.2"></circle>
+<circle cx="42" cy="21" fill="currentColor" r="1.3"></circle>
+<circle cx="50" cy="20" fill="currentColor" r="1.4"></circle>
+<circle cx="58" cy="21" fill="currentColor" r="1.3"></circle>
+<circle cx="66" cy="24" fill="currentColor" r="1.2"></circle>
+<!-- Brow Row -->
+<circle cx="30" cy="32" fill="currentColor" r="1.3"></circle>
+<circle cx="37" cy="30" fill="currentColor" r="1.5"></circle>
+<circle cx="44" cy="30" fill="currentColor" r="1.4"></circle>
+<circle cx="56" cy="30" fill="currentColor" r="1.4"></circle>
+<circle cx="63" cy="30" fill="currentColor" r="1.5"></circle>
+<circle cx="70" cy="32" fill="currentColor" r="1.3"></circle>
+</g>
+<!-- Ocular Points (Eyes with micro-pulse) -->
+<g class="transition-transform duration-300" id="ocular-nodes">
+<!-- Left Eye -->
+<circle class="animate-pulse" cx="38" cy="40" fill="currentColor" r="2.2"></circle>
+<circle cx="34" cy="40" fill="currentColor" opacity="0.6" r="1"></circle>
+<circle cx="42" cy="40" fill="currentColor" opacity="0.6" r="1"></circle>
+<!-- Right Eye -->
+<circle class="animate-pulse" cx="62" cy="40" fill="currentColor" r="2.2"></circle>
+<circle cx="58" cy="40" fill="currentColor" opacity="0.6" r="1"></circle>
+<circle cx="66" cy="40" fill="currentColor" opacity="0.6" r="1"></circle>
+</g>
+<!-- Nasal Bridge Nodes -->
+<g opacity="0.75">
+<circle cx="50" cy="38" fill="currentColor" r="1.1"></circle>
+<circle cx="50" cy="44" fill="currentColor" r="1.2"></circle>
+<circle cx="50" cy="50" fill="currentColor" r="1.4"></circle>
+<circle cx="46" cy="54" fill="currentColor" r="1"></circle>
+<circle cx="54" cy="54" fill="currentColor" r="1"></circle>
+</g>
+<!-- Cheekbone Contours -->
+<g opacity="0.65">
+<circle cx="26" cy="46" fill="currentColor" r="1.1"></circle>
+<circle cx="28" cy="54" fill="currentColor" r="1.2"></circle>
+<circle cx="74" cy="46" fill="currentColor" r="1.1"></circle>
+<circle cx="72" cy="54" fill="currentColor" r="1.2"></circle>
+</g>
+<!-- ARTICULATING JAW & MOUTH GROUP (Moves dynamically on audio speech) -->
+<g class="transition-transform ease-out duration-100" id="dynamic-jaw-group" style="transform-origin: 50px 58px;">
+<!-- Upper Lip / Mouth Opening Nodes -->
+<circle cx="44" cy="62" fill="currentColor" r="1.3"></circle>
+<circle cx="50" cy="61" fill="currentColor" r="1.6"></circle>
+<circle cx="56" cy="62" fill="currentColor" r="1.3"></circle>
+<!-- Mouth Void / Aperture Dot -->
+<ellipse class="transition-all duration-150" cx="50" cy="65" fill="currentColor" id="mouth-void" opacity="0.4" rx="3.5" ry="1"></ellipse>
+<!-- Lower Lip Nodes -->
+<circle class="transition-transform duration-100" cx="50" cy="68" fill="currentColor" id="lower-lip" r="1.5"></circle>
+<circle cx="45" cy="67" fill="currentColor" r="1.2"></circle>
+<circle cx="55" cy="67" fill="currentColor" r="1.2"></circle>
+<!-- Jaw Contours & Chin Apex Nodes -->
+<circle cx="34" cy="64" fill="currentColor" opacity="0.7" r="1.2"></circle>
+<circle cx="38" cy="72" fill="currentColor" opacity="0.8" r="1.3"></circle>
+<circle cx="44" cy="78" fill="currentColor" r="1.4"></circle>
+<circle cx="50" cy="80" fill="currentColor" id="chin-apex" r="2.0"></circle>
+<circle cx="56" cy="78" fill="currentColor" r="1.4"></circle>
+<circle cx="62" cy="72" fill="currentColor" opacity="0.8" r="1.3"></circle>
+<circle cx="66" cy="64" fill="currentColor" opacity="0.7" r="1.2"></circle>
+</g>
+</svg>
+<!-- Scanning Sweep Line Over Face -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-primary-container/15 to-transparent h-6 w-full animate-[bounce_4s_infinite] pointer-events-none opacity-40"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Center Dialogue Stage & Kinetic Transcript Canvas -->
+<div class="my-space-md flex-1 flex flex-col justify-center">
+<div class="p-gutter-md sm:p-margin-md rounded-2xl bg-surface-container-low/70 backdrop-blur-2xl shadow-2xl relative overflow-hidden group">
+<!-- Subtle Top Edge Mode Accent Glow -->
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-80" id="card-edge-glow"></div>
+<!-- Header Metadata within Dialogue Card -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">neurology</span>
+<span class="font-label-sm text-label-sm text-primary tracking-wider uppercase" id="dialogue-tag">LIVE SYNTHESIS STREAM</span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<span class="hidden sm:inline">INFERENCE CONFIDENCE:</span>
+<span class="text-on-surface font-mono">99.82%</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim"></span>
+</div>
+</div>
+<!-- Main Streamed Output Text -->
+<div class="min-h-[110px] sm:min-h-[130px] flex items-start">
+<p class="font-headline-md text-headline-sm sm:text-headline-md text-on-surface font-normal leading-relaxed selection:bg-primary selection:text-on-primary" id="kinetic-ai-output">
+<!-- Text injected dynamically via streaming engine below -->
+</p>
+<span class="inline-block w-2.5 h-6 ml-1 bg-primary-container align-middle animate-pulse" id="streaming-cursor"></span>
+</div>
+<!-- Audio Waveform Visualization Timeline -->
+<div class="mt-space-lg pt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px]">volume_up</span>
+<span>SYNAPSE NEURAL TTS // VOCAL MODEL V4.8</span>
+</div>
+<span class="font-mono text-on-surface-variant" id="timeline-duration">00:04.12 / 00:08.50</span>
+</div>
+<!-- Dynamic Audio Frequency Bar Array -->
+<div class="h-8 flex items-center justify-between gap-1 w-full py-1" id="frequency-bar-container">
+<!-- 32 Animated Audio EQ Bars -->
+<div class="w-full bg-primary/20 rounded-full h-2 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-3 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-5 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-2 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-6 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-7 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-3 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-4 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-7 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-2 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-5 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-8 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-6 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-4 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-2 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-5 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-7 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-4 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-3 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-6 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-8 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-5 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-2 transition-all duration-100 eq-bar"></div>
+<div class="w-full bg-primary/20 rounded-full h-4 transition-all duration-100 eq-bar"></div>
+</div>
+</div>
+<!-- Quick Interaction Chips -->
+<div class="mt-space-md flex flex-wrap items-center gap-space-xs pt-space-sm">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs" id="chip-replay" type="button">
+<span class="material-symbols-outlined text-[15px]">replay</span>
+<span>Play Audio Again</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs" id="chip-copy" type="button">
+<span class="material-symbols-outlined text-[15px]">content_copy</span>
+<span id="copy-text">Copy Response</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container hover:bg-surface-bright text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs" id="chip-branch" type="button">
+<span class="material-symbols-outlined text-[15px]">fork_right</span>
+<span>Branch Thought</span>
+</button>
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-high hover:bg-surface-bright text-primary font-label-md text-label-md transition-all flex items-center gap-space-xs ml-auto" id="chip-mode-flip" type="button">
+<span class="material-symbols-outlined text-[15px]">fast_forward</span>
+<span id="mode-flip-label">Switch to G-Mode Overdrive</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Floating Command Deck & Speech Bar -->
+<div class="w-full pt-space-xs pb-space-sm flex flex-col gap-space-xs">
+<!-- Command Bar Wrapper -->
+<div class="p-1.5 rounded-2xl bg-surface-container-lowest/80 backdrop-blur-2xl shadow-2xl flex items-center gap-space-sm">
+<!-- Push-to-Talk Dynamic Mic Sphere -->
+<button class="h-12 w-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 shrink-0 shadow-lg" id="btn-ptt" title="Push to Speak / Hold" type="button">
+<span class="material-symbols-outlined text-[24px]" id="ptt-icon">mic</span>
+</button>
+<!-- Command Input Textbox -->
+<div class="flex-1 flex items-center px-space-sm gap-space-sm">
+<span class="font-label-md text-label-md text-primary font-mono select-none">&gt;_</span>
+<input class="w-full bg-transparent border-0 text-on-surface placeholder:text-outline focus:outline-none font-body-md text-body-md py-2" id="prompt-input" placeholder="Prompt cognitive engine or ask anything via voice..." type="text"/>
+</div>
+<!-- Action Send Trigger -->
+<button class="px-space-md py-2 rounded-xl bg-surface-container hover:bg-surface-bright text-on-surface font-label-md text-label-md transition-all flex items-center gap-space-xs shrink-0" id="btn-send-prompt" type="button">
+<span>Synthesize</span>
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+</button>
+</div>
+<!-- Telemetry Status Bar Under Input -->
+<div class="px-space-md flex flex-wrap items-center justify-between text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span id="telemetry-temp">TEMP: 0.20 (ANALYTICAL)</span>
+</span>
+<span>LATENCY // 42ms REALTIME</span>
+<span class="hidden sm:inline">SAMPLE RATE // 48.0 kHz 24-BIT</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span>SECURE ENCLAVE // VERIFIED</span>
+<span class="material-symbols-outlined text-[13px] text-primary">verified_user</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    // Mode State
+    let currentMode = 'alpha'; // 'alpha' | 'g-mode'
+    let isSpeaking = true;
+    let speechInterval = null;
+    let streamTimer = null;
+    let textIndex = 0;
+
+    // Presets for the two cognitive systems
+    const ALPHA_TEXT = "I have initialized neural pathway synthesis across your cognitive nodes. In Alpha Mode, throughput is tuned for deep analytical precision. Ready to activate G-mode whenever overclocked latency is required.";
+    const GMODE_TEXT = "G-MODE OVERDRIVE ENGAGED. Thermal headroom unlocked. Realtime clock throttled to 14ms response rate with maximum creative velocity. Direct synthetic cortex link established.";
+
+    // DOM Elements
+    const root = document.getElementById('synapse-root');
+    const btnAlpha = document.getElementById('btn-mode-alpha');
+    const btnG = document.getElementById('btn-mode-g');
+    const btnFlip = document.getElementById('chip-mode-flip');
+    const modeBadgeLabel = document.getElementById('mode-badge-label');
+    const throughputVal = document.getElementById('throughput-val');
+    const modelCodename = document.getElementById('model-codename');
+    const engineDesc = document.getElementById('engine-desc');
+    const tintOverlay = document.getElementById('tint-overlay');
+    const radialGlow = document.getElementById('radial-glow');
+    const textOutput = document.getElementById('kinetic-ai-output');
+    const dynamicJaw = document.getElementById('dynamic-jaw-group');
+    const mouthVoid = document.getElementById('mouth-void');
+    const lowerLip = document.getElementById('lower-lip');
+    const chinApex = document.getElementById('chin-apex');
+    const audioHalo = document.getElementById('audio-wave-halo');
+    const btnToggleTalking = document.getElementById('btn-toggle-talking');
+    const speechToggleText = document.getElementById('speech-toggle-text');
+    const playPauseIcon = document.getElementById('play-pause-icon');
+    const syncStatus = document.getElementById('sync-status');
+    const promptInput = document.getElementById('prompt-input');
+    const btnSend = document.getElementById('btn-send-prompt');
+    const btnPtt = document.getElementById('btn-ptt');
+    const pttIcon = document.getElementById('ptt-icon');
+    const chipReplay = document.getElementById('chip-replay');
+    const chipCopy = document.getElementById('chip-copy');
+    const copyText = document.getElementById('copy-text');
+    const modeFlipLabel = document.getElementById('mode-flip-label');
+    const telemetryTemp = document.getElementById('telemetry-temp');
+    const valLatency = document.getElementById('val-latency');
+    const eqBars = document.querySelectorAll('.eq-bar');
+
+    // Color definitions for Alpha vs G-Mode
+    function applyTheme(mode) {
+      currentMode = mode;
+      root.setAttribute('data-mode', mode);
+
+      if (mode === 'alpha') {
+        // Alpha Palette updates
+        btnAlpha.className = "relative px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center gap-space-xs bg-primary-container text-on-primary-container font-semibold shadow-lg";
+        btnG.className = "relative px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface";
+        
+        modeBadgeLabel.textContent = "NEURAL SYNC // ALPHA MODE";
+        throughputVal.textContent = "4.8 TFLOPS";
+        modelCodename.textContent = "NEURO-9 // DEEP REASON";
+        engineDesc.textContent = "Analytical matrix tuned for precision & complex systemic synthesis.";
+        telemetryTemp.textContent = "TEMP: 0.20 (ANALYTICAL)";
+        valLatency.textContent = "14ms STEREO";
+        modeFlipLabel.textContent = "Switch to G-Mode Overdrive";
+
+        tintOverlay.className = "absolute inset-0 pointer-events-none transition-all duration-700 ease-out z-0 bg-gradient-to-tr from-primary-container/10 via-transparent to-primary/5";
+        radialGlow.className = "absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(0,240,255,0.08),transparent)] transition-all duration-700";
+
+        // Reconfigure PTT button glow
+        btnPtt.className = "h-12 w-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 shrink-0 shadow-lg";
+        
+        streamTypewriterText(ALPHA_TEXT);
+      } else {
+        // G-Mode (Orange-Red Energy)
+        btnG.className = "relative px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center gap-space-xs bg-secondary-container text-on-secondary-container font-semibold shadow-lg";
+        btnAlpha.className = "relative px-space-md py-1.5 rounded-full font-label-md text-label-md transition-all duration-300 flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface";
+
+        modeBadgeLabel.textContent = "OVERCLOCK // G-MODE OVERDRIVE";
+        throughputVal.textContent = "12.4 TFLOPS (BOOST)";
+        modelCodename.textContent = "G-CORE // HYPER VELOCITY";
+        engineDesc.textContent = "Low-latency volcanic execution engineered for high-cadence creative flows.";
+        telemetryTemp.textContent = "TEMP: 0.88 (EXPLORATORY)";
+        valLatency.textContent = "6ms LOW-JITTER";
+        modeFlipLabel.textContent = "Return to Alpha Mode";
+
+        tintOverlay.className = "absolute inset-0 pointer-events-none transition-all duration-700 ease-out z-0 bg-gradient-to-tr from-secondary-container/20 via-transparent to-secondary/10";
+        radialGlow.className = "absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(255,86,37,0.18),transparent)] transition-all duration-700";
+
+        // Reconfigure PTT button glow to orange
+        btnPtt.className = "h-12 w-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 shrink-0 shadow-lg";
+
+        streamTypewriterText(GMODE_TEXT);
+      }
+    }
+
+    // Typewriter Text Streamer
+    function streamTypewriterText(content) {
+      if (streamTimer) clearInterval(streamTimer);
+      textOutput.textContent = "";
+      textIndex = 0;
+      setTalkingState(true);
+
+      streamTimer = setInterval(() => {
+        if (textIndex < content.length) {
+          textOutput.textContent += content.charAt(textIndex);
+          textIndex++;
+        } else {
+          clearInterval(streamTimer);
+          streamTimer = null;
+          // Finish speaking briefly after text wraps
+          setTimeout(() => {
+            if (isSpeaking) {
+              setTalkingState(false);
+            }
+          }, 1200);
+        }
+      }, 22);
+    }
+
+    // Articulated Dotted Jaw Animation Simulation
+    function runSpeechAnimationLoop() {
+      if (speechInterval) clearInterval(speechInterval);
+
+      speechInterval = setInterval(() => {
+        if (!isSpeaking) {
+          dynamicJaw.style.transform = 'translateY(0px)';
+          mouthVoid.setAttribute('ry', '1');
+          mouthVoid.style.opacity = '0.3';
+          lowerLip.style.transform = 'translateY(0px)';
+          audioHalo.style.transform = 'scale(1)';
+          audioHalo.style.opacity = '0.2';
+          
+          // Flatten EQ bars
+          eqBars.forEach((bar, i) => {
+            bar.style.height = '4px';
+            bar.style.opacity = '0.3';
+          });
+          return;
+        }
+
+        // Generate natural human speech phonetic cadence values
+        const randomJawOffset = Math.random() * 5.8;
+        const randomMouthHeight = 1 + (Math.random() * 3.5);
+        const randomScaleHalo = 1 + (Math.random() * 0.12);
+
+        dynamicJaw.style.transform = `translateY(${randomJawOffset}px)`;
+        mouthVoid.setAttribute('ry', randomMouthHeight.toFixed(1));
+        mouthVoid.style.opacity = (0.4 + (randomJawOffset / 10)).toFixed(2);
+        lowerLip.style.transform = `translateY(${randomJawOffset * 0.6}px)`;
+        
+        audioHalo.style.transform = `scale(${randomScaleHalo})`;
+        audioHalo.style.opacity = (0.2 + (randomJawOffset / 12)).toFixed(2);
+
+        // Randomize frequency bars to match speech modulation
+        eqBars.forEach((bar) => {
+          const barHeight = Math.floor(4 + Math.random() * 26);
+          bar.style.height = `${barHeight}px`;
+          bar.style.opacity = (0.4 + Math.random() * 0.6).toFixed(2);
+        });
+
+      }, 100);
+    }
+
+    function setTalkingState(speaking) {
+      isSpeaking = speaking;
+      if (speaking) {
+        speechToggleText.textContent = "PAUSE JAW CADENCE";
+        playPauseIcon.textContent = "pause_circle";
+        syncStatus.textContent = "SYNCHRONIZED // TALKING";
+      } else {
+        speechToggleText.textContent = "RESUME JAW CADENCE";
+        playPauseIcon.textContent = "graphic_eq";
+        syncStatus.textContent = "IDLE // LISTENING";
+      }
+    }
+
+    // Event Listeners
+    btnAlpha.addEventListener('click', () => applyTheme('alpha'));
+    btnG.addEventListener('click', () => applyTheme('g-mode'));
+    btnFlip.addEventListener('click', () => {
+      applyTheme(currentMode === 'alpha' ? 'g-mode' : 'alpha');
+    });
+
+    btnToggleTalking.addEventListener('click', () => {
+      setTalkingState(!isSpeaking);
+    });
+
+    chipReplay.addEventListener('click', () => {
+      const target = currentMode === 'alpha' ? ALPHA_TEXT : GMODE_TEXT;
+      streamTypewriterText(target);
+    });
+
+    chipCopy.addEventListener('click', () => {
+      navigator.clipboard.writeText(textOutput.textContent).then(() => {
+        copyText.textContent = "Copied to Enclave!";
+        setTimeout(() => { copyText.textContent = "Copy Response"; }, 1800);
+      });
+    });
+
+    // PTT Live Interaction Mock
+    let isPttActive = false;
+    btnPtt.addEventListener('mousedown', () => {
+      isPttActive = true;
+      pttIcon.textContent = "record_voice_over";
+      setTalkingState(false);
+      promptInput.placeholder = "Listening to vocal input stream...";
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isPttActive) {
+        isPttActive = false;
+        pttIcon.textContent = "mic";
+        promptInput.placeholder = "Prompt cognitive engine or ask anything via voice...";
+        promptInput.value = "Evaluate acoustic telemetry and optimize bandwidth";
+        setTimeout(() => {
+          btnSend.click();
+        }, 350);
+      }
+    });
+
+    // Handle Custom Prompt Synthesizing
+    function handlePromptSubmit() {
+      const val = promptInput.value.trim();
+      if (!val) return;
+      promptInput.value = "";
+      const generatedResp = `Synthesizing neural model query: "${val}". High-bandwidth vector index retrieved. Response dispatched with zero quantization loss.`;
+      streamTypewriterText(generatedResp);
+    }
+
+    btnSend.addEventListener('click', handlePromptSubmit);
+    promptInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') handlePromptSubmit();
+    });
+
+    // Initialization
+    applyTheme('alpha');
+    runSpeechAnimationLoop();
+  })();
+</script></main></div></body></html>

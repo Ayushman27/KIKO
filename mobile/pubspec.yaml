@@ -1,0 +1,56 @@
+name: kiko_mobile
+description: KIKO Personal AI Agent — Windows Desktop & Android App
+publish_to: 'none'
+version: 1.1.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Networking
+  http: ^1.2.0
+  web_socket_channel: ^2.4.1
+  dio: ^5.4.0
+
+  # State management
+  provider: ^6.1.1
+
+  # Storage / Prefs (works on Windows + Android)
+  shared_preferences: ^2.2.3
+
+  # URL launcher (works on Windows + Android)
+  url_launcher: ^6.2.5
+
+  # Icons
+  cupertino_icons: ^1.0.6
+
+  # System tray (Windows)
+  system_tray: ^2.0.3
+
+  # Window management (Windows)
+  window_manager: ^0.4.3
+
+  # File picker (Windows + Android)
+  file_picker: ^8.0.7
+
+  # Platform-specific — conditionally imported
+  flutter_background_service:
+    version: ^5.0.9
+    # Only needed for Android background agent
+  android_intent_plus: ^5.1.0
+  flutter_local_notifications: ^17.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icons/
+  shaders:
+    - shaders/atmospheric_smoke.frag

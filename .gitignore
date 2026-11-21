@@ -1,0 +1,88 @@
+# Environment variables & secrets (CRITICAL)
+.env
+*.env
+*.env.*
+!.env.example
+
+# Python
+venv/
+**/venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+*.db
+*.sqlite3
+*.log
+
+# Flutter & Dart & Gradle builds
+build/
+**/build/
+mobile/build/
+.dart_tool/
+**/.dart_tool/
+mobile/.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+*.apk
+*.aab
+*.dex
+
+# Android specifics
+.gradle/
+**/.gradle/
+local.properties
+**/local.properties
+captures/
+**/captures/
+
+# Ephemeral desktop/platform files
+ios/Flutter/ephemeral/
+**/ios/Flutter/ephemeral/
+macos/Flutter/ephemeral/
+**/macos/Flutter/ephemeral/
+windows/flutter/ephemeral/
+**/windows/flutter/ephemeral/
+linux/flutter/ephemeral/
+**/linux/flutter/ephemeral/
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary Archives & Scratch
+*.zip
+scratch/
